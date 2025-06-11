@@ -327,13 +327,12 @@ check_variable() {
   [[ -z "\${NEZHA_SERVER}" || -z "\${NEZHA_PORT}" || -z "\${NEZHA_KEY}" ]] && exit
 }
 
-# 下载最新版本 Nezha Agent
+# 下载 Nezha Agent V0 最终版 v0.20.5
 download_agent() {
   if [ ! -e nezha-agent ]; then
-    URL=\$(wget -qO- "https://api.github.com/repos/nezhahq/agent/releases/latest" | grep -o "https.*linux_amd64.zip")
-    URL=\${URL:-https://github.com/nezhahq/agent/releases/download/v0.15.6/nezha-agent_linux_amd64.zip}
-    wget \${URL}
+    wget https://github.com/nezhahq/agent/releases/download/v0.20.5/nezha-agent_linux_amd64.zip
     unzip -qod ./ nezha-agent_linux_amd64.zip
+    chmod +x nezha-agent
     rm -f nezha-agent_linux_amd64.zip
   fi
 }
