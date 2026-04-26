@@ -31,19 +31,19 @@ generate_config() {
                         "dest":3001
                     },
                     {
-                        "path":"/${WSPATH}/profile/o3MkOsLzt",
+                        "path":"/${WSPATH}/v/242cf53b5bdb",
                         "dest":3002
                     },
                     {
-                        "path":"/${WSPATH}-vmess",
+                        "path":"/${WSPATH}/24b4b1e1",
                         "dest":3003
                     },
                     {
-                        "path":"/${WSPATH}-trojan",
+                        "path":"/${WSPATH}/24b4b1e1",
                         "dest":3004
                     },
                     {
-                        "path":"/${WSPATH}-shadowsocks",
+                        "path":"/${WSPATH}/24b4b1e1",
                         "dest":3005
                     }
                 ]
@@ -86,7 +86,7 @@ generate_config() {
                 "network":"ws",
                 "security":"none",
                 "wsSettings":{
-                    "path":"/${WSPATH}/profile/o3MkOsLzt"
+                    "path":"/${WSPATH}/v/242cf53b5bdb"
                 }
             },
             "sniffing":{
@@ -113,7 +113,7 @@ generate_config() {
             "streamSettings":{
                 "network":"ws",
                 "wsSettings":{
-                    "path":"/${WSPATH}-vmess"
+                    "path":"/${WSPATH}/24b4b1e1"
                 }
             },
             "sniffing":{
@@ -140,7 +140,7 @@ generate_config() {
                 "network":"ws",
                 "security":"none",
                 "wsSettings":{
-                    "path":"/${WSPATH}-trojan"
+                    "path":"/${WSPATH}/24b4b1e1"
                 }
             },
             "sniffing":{
@@ -168,7 +168,7 @@ generate_config() {
             "streamSettings":{
                 "network":"ws",
                 "wsSettings":{
-                    "path":"/${WSPATH}-shadowsocks"
+                    "path":"/${WSPATH}/24b4b1e1"
                 }
             },
             "sniffing":{
