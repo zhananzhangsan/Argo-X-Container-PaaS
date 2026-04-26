@@ -4,7 +4,7 @@
 WSPATH=${WSPATH:-'dm'}
 UUID=${UUID:-'24b4b1e1-ffff-ffff-ffff-242cf53b5bdb'}
 WEB_USERNAME=${WEB_USERNAME:-'admin'}
-WEB_PASSWORD=${WEB_PASSWORD:-'678910'}
+WEB_PASSWORD=${WEB_PASSWORD:-'password'}
 
 generate_config() {
   cat > config.json << EOF
