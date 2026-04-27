@@ -96,18 +96,18 @@ app.get("/test", function (req, res) {
 
 // keepalive begin
 //web保活
-function keep_web_alive() {
+//function keep_web_alive() {
   // 请求主页，保持唤醒
-  exec("curl -m8 127.0.0.1:" + port, function (err, stdout, stderr) {
-    if (err) {
-      console.log("保活-请求主页-命令行执行错误：" + err);
-    }
-    else {
-      console.log("保活-请求主页-命令行执行成功，响应报文:" + stdout);
-    }
-  });
-}
-setInterval(keep_web_alive, 10 * 1000);
+  //exec("curl -m8 127.0.0.1:" + port, function (err, stdout, stderr) {
+    //if (err) {
+      //console.log("保活-请求主页-命令行执行错误：" + err);
+   // }
+  //  else {
+    //  console.log("保活-请求主页-命令行执行成功，响应报文:" + stdout);
+ //   }
+//  });
+//}
+//setInterval(keep_web_alive, 10 * 1000);
 
 app.use( /* 具体配置项迁移参见 https://github.com/chimurai/http-proxy-middleware/blob/master/MIGRATION.md */
   legacyCreateProxyMiddleware({
