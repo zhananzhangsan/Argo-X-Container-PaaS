@@ -31,7 +31,7 @@ generate_config() {
                         "dest":3001
                     },
                     {
-                        "path":"/${WSPATH}/v/242cf53b5bdb",
+                        "path":"/${WSPATH}242cf5",
                         "dest":3002
                     },
                     {
@@ -86,7 +86,7 @@ generate_config() {
                 "network":"ws",
                 "security":"none",
                 "wsSettings":{
-                    "path":"/${WSPATH}/v/242cf53b5bdb"
+                    "path":"/${WSPATH}242cf5"
                 }
             },
             "sniffing":{
@@ -275,7 +275,7 @@ export_list() {
 *******************************************
 V2-rayN:
 ----------------------------
-vless://${UUID}@icook.hk:443?encryption=none&security=tls&sni=\${ARGO_DOMAIN}&type=ws&host=\${ARGO_DOMAIN}&path=%2F${WSPATH}/v/242cf53b5bdb#Argo-Vless
+vless://${UUID}@icook.hk:443?encryption=none&security=tls&sni=\${ARGO_DOMAIN}&type=ws&host=\${ARGO_DOMAIN}&path=%2F${WSPATH}242cf5#Argo-Vless
 ----------------------------
 vmess://\$(echo \$VMESS | base64 -w0)
 ----------------------------
@@ -286,7 +286,7 @@ ss://$(echo "chacha20-ietf-poly1305:${UUID}@icook.hk:443" | base64 -w0)@icook.hk
 *******************************************
 小火箭:
 ----------------------------
-vless://${UUID}@icook.hk:443?encryption=none&security=tls&type=ws&host=\${ARGO_DOMAIN}&path=/${WSPATH}/v/242cf53b5bdb&sni=\${ARGO_DOMAIN}#Argo-Vless
+vless://${UUID}@icook.hk:443?encryption=none&security=tls&type=ws&host=\${ARGO_DOMAIN}&path=/${WSPATH}242cf5&sni=\${ARGO_DOMAIN}#Argo-Vless
 ----------------------------
 vmess://$(echo "none:${UUID}@icook.hk:443" | base64 -w0)?remarks=Argo-Vmess&obfsParam=\${ARGO_DOMAIN}&path=/${WSPATH}24b4b1e1&obfs=websocket&tls=1&peer=\${ARGO_DOMAIN}&alterId=0
 ----------------------------
@@ -296,7 +296,7 @@ ss://$(echo "chacha20-ietf-poly1305:${UUID}@icook.hk:443" | base64 -w0)?obfs=wss
 *******************************************
 Clash:
 ----------------------------
-- {name: Argo-Vless, type: vless, server: icook.hk, port: 443, uuid: ${UUID}, tls: true, servername: \${ARGO_DOMAIN}, skip-cert-verify: false, network: ws, ws-opts: {path: /${WSPATH}/v/242cf53b5bdb, headers: { Host: \${ARGO_DOMAIN}}}, udp: true}
+- {name: Argo-Vless, type: vless, server: icook.hk, port: 443, uuid: ${UUID}, tls: true, servername: \${ARGO_DOMAIN}, skip-cert-verify: false, network: ws, ws-opts: {path: /${WSPATH}242cf5, headers: { Host: \${ARGO_DOMAIN}}}, udp: true}
 ----------------------------
 - {name: Argo-Vmess, type: vmess, server: icook.hk, port: 443, uuid: ${UUID}, alterId: 0, cipher: none, tls: true, skip-cert-verify: true, network: ws, ws-opts: {path: /${WSPATH}24b4b1e1, headers: {Host: \${ARGO_DOMAIN}}}, udp: true}
 ----------------------------
